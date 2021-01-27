@@ -20,11 +20,11 @@ for (( counti=0 ; counti<4 ; counti++ ))
 do
         for (( countj=$(($counti+1)) ; countj<4 ; countj++ ))
         do
-                if (( ${myArray[counti]} < ${myArray[countj]} )); then
+                if (( ${myArray[counti]} > ${myArray[countj]} )); then
                         a=${myArray[counti]}
                         myArray[$counti]=${myArray[countj]}
                         myArray[$countj]=$a
                 fi
         done
 done
-echo "Descending Order: "${myArray[@]}
+echo "Ascending Order: "${myArray[@]}
