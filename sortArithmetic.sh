@@ -10,3 +10,9 @@ myDict[case3]=`awk 'BEGIN{print '$c'+'$a'/'$b'}'`
 echo "c+a/b:"${myDict[case3]}           #$(($c+$a/$b))
 myDict[case4]=`awk 'BEGIN{print '$a'%'$b'+'$c'}'`
 echo "a%b+c:"${myDict[case4]}           #$(($a%$b+$c))
+for (( count=0 ; count<4 ; count++ ))
+do
+	myArray[$count]=${myDict["case"$((count+1))]}
+done
+echo ${myDict[@]}
+echo ${myArray[@]}
