@@ -1,2 +1,3 @@
 #!/bin/bash -x
-echo "Welcome to Sorting Arithmetic Computation Problem"
+read -p "Enter three numbers: " a b c
+echo "a:$a b:$b c:$c"
